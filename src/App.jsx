@@ -1,4 +1,5 @@
 import './App.css'
+import SummaryCard from './components/SummaryCard.jsx'
 
 function App() {
   return (
@@ -23,21 +24,21 @@ function App() {
       </section>
 
       <section className="overview-grid" aria-label="Release overview">
-        <article className="summary-card">
-          <span className="card-label">Next release</span>
-          <strong>v0.2.0</strong>
-          <p>Documentation, CI workflow, repository hygiene, and release tracking.</p>
-        </article>
-        <article className="summary-card">
-          <span className="card-label">Quality gate</span>
-          <strong>ESLint</strong>
-          <p>Every pull request runs the same lint command used locally.</p>
-        </article>
-        <article className="summary-card">
-          <span className="card-label">Git flow</span>
-          <strong>dev to main</strong>
-          <p>Features land in dev before a release pull request promotes them to main.</p>
-        </article>
+        <SummaryCard
+          label="Next release"
+          title="v0.2.0"
+          description="Documentation, CI workflow, repository hygiene, and release tracking."
+        />
+        <SummaryCard
+          label="Quality gate"
+          title="ESLint"
+          description="Every pull request runs the same lint command used locally."
+        />
+        <SummaryCard
+          label="Git flow"
+          title="dev to main"
+          description="Features land in dev before a release pull request promotes them to main."
+        />
       </section>
 
       <section className="release-panel" aria-label="Release readiness checklist">
